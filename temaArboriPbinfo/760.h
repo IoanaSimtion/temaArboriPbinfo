@@ -9,23 +9,36 @@ fii fiilor rădăcinii pe nivelul 2, etc. Să se determine suma valorilor din no
 
 void citireVector(int v[], int& n) {
 
-	ifstream f("biarbore.in");
+	ifstream f("knivel.in");
 	n = 0;
 	while (!f.eof()) {
 		f >> v[n];
 		n++;
 	}
 
+
 }
 
 
 void sol760() {
 
-	int v[100], n;
+	int v[100], n, k, suma = 0;
 
 	citireVector(v, n);
+	
+	cout << "k=";
+	cin >> k;
 
 	BinaryTree tree;
 
+	tree.addPreordine(v, n);
+
+	tree.sumaNivel(suma, k);
+
+	cout << "Elementele de pe nivelul " << k << " sunt: ";
+
+	tree.afisareElemNivel(k);
+	
+	cout << "Suma nivel " << k << ": " << suma;
 
 }
