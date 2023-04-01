@@ -150,6 +150,7 @@
     <None Include="biarbore.in" />
     <None Include="biminprim.in" />
     <None Include="bst.in" />
+    <None Include="knivel.in" />
     <None Include="preordine.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

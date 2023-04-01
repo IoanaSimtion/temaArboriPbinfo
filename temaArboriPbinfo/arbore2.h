@@ -194,8 +194,85 @@ struct BinaryTree {
 	}
 
 
+	void sumaNivel(int& suma, int k) {
+
+		TreeNode* aux = root;
+		Coada<TreeNode*> c;
+
+		c.push(aux);
+
+		int ct = 0;
+
+		while (!c.isEmpty()) {
+
+			aux = c.peak()->data;
+
+			if (aux->left != NULL) {
+				c.push(aux->left);
+			}
+
+			if (aux->right != NULL) {
+				c.push(aux->right);
+			}
+
+			/*if (aux->data != 0) {
+				cout << aux->data << ' ';
+				cout << ct << endl;
+			}*/
+
+
+			if ((ct >= pow(2, k) - 1) && (ct < pow(2, k + 1) - 1)) {
+				suma += aux->data;
+				//cout << "aici" << endl;
+			}
+			
+			ct++;
+			c.pop();
+		}
+
+	}
+
+
 
 	//ALTE FUNCTII
+
+
+	//todo functie ce afiseaza elementele de pe un nivel
+
+	void afisareElemNivel(int k) {
+
+		TreeNode* aux = root;
+
+		Coada<TreeNode*> c;
+
+		c.push(aux);
+
+		int ct = 0;
+
+		while (!c.isEmpty()) {
+
+			aux = c.peak()->data;
+
+			if (aux->left != NULL) {
+				c.push(aux->left);
+			}
+
+			if (aux->right != NULL) {
+				c.push(aux->right);
+			}
+
+			if (ct >= pow(2, k) - 1 && ct < pow(2, k + 1) - 1) {
+				cout << aux->data << ' ';
+			}
+
+			ct++;
+
+			c.pop();
+
+		}
+		cout << endl;
+
+	}
 
 
 	//todo functie ce verifica daca un nr este prim

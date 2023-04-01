@@ -79,5 +79,8 @@
     <None Include="bst.in">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="knivel.in">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

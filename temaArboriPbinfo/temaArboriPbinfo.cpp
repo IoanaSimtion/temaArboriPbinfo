@@ -9,7 +9,8 @@ using namespace std;
 //#include "759.h";
 //#include "758.h";
 //#include "761.h";
-#include "3010.h";
+//#include "3010.h";
+#include "760.h";
 
 int main()
 {
@@ -28,6 +29,8 @@ int main()
 
     //sol761();
 
-    sol3010();
+    //sol3010();
+
+    sol760();
     
 }
